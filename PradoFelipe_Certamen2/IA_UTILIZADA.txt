@@ -19,3 +19,6 @@ Como muestro las solicitudes en una tabla sin usar base de datos?
 
 Como agrego un diseño responsive para que se vea bien en el celular?
 
+Reflexion:
+Copilot me ayudó con el código repetitivo y Gemini con dudas de CSS; siempre se debe revisar y adaptar cada sugerencia porque no todo sirve tal cual lo arroja la IA.
+
