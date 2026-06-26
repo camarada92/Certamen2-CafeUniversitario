@@ -1,0 +1,436 @@
+/* 1. ESTILOS GENERALES */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: #3e2723;
+
+  background-color: #f5f0eb;
+  background-image: linear-gradient(
+      rgba(62, 39, 35, 0.7),
+      rgba(62, 39, 35, 0.7)
+    ),
+    url("../img/banner.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+h1,
+h2,
+h3 {
+  font-family: Georgia, "Times New Roman", serif;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Título de cada sección */
+.titulo-seccion {
+  font-size: 1.8rem;
+  color: #4e342e;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+/* 2. HEADER Y NAVEGACIÓN */
+header {
+  background-color: #3e2723;
+  color: #fff;
+  padding: 0.8rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo img {
+  width: 42px;
+}
+
+.logo-texto {
+  font-family: Georgia, serif;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #fff;
+}
+
+.nav-menu {
+  display: flex;
+  list-style: none;
+  gap: 28px;
+}
+
+.nav-menu a {
+  color: #fff;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav-menu a:hover {
+  color: #d7ccc8;
+}
+
+/* 3. BANNER PRINCIPAL (tarjeta translúcida sobre el fondo de granos) */
+.banner {
+  padding: 5rem 2rem;
+}
+
+.banner-texto {
+  max-width: 620px;
+  margin: 0 auto;
+  padding: 2.8rem;
+  background-color: rgba(255, 255, 255, 0.92);
+  border-radius: 16px;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.45);
+  text-align: center;
+}
+
+.banner h1 {
+  font-size: 3rem;
+  color: #5d4037;
+}
+
+.banner h2 {
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+  color: #4e342e;
+}
+
+.banner p {
+  margin: 0 auto 1.5rem;
+  max-width: 460px;
+  color: #5d4037;
+}
+
+/* Botones */
+.btn {
+  display: inline-block;
+  background-color: #a1672f;
+  color: #fff;
+  padding: 0.8rem 1.6rem;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.btn:hover {
+  background-color: #8a5527;
+  transform: translateY(-3px);
+}
+
+/* Panel translúcido compartido por las secciones centrales
+   (deja ver el fondo barista a través, estilo Vida Plena) */
+.nosotros,
+.productos,
+.contacto {
+  max-width: 1100px;
+  margin: 3rem auto;
+  padding: 3rem;
+  background-color: rgba(255, 255, 255, 0.92);
+  border-radius: 16px;
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.35);
+}
+
+/* 4. NOSOTROS */
+
+.nosotros-contenido {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+}
+
+.nosotros-img {
+  width: 140px;
+  height: 140px;
+  background-color: #3e2723;
+  border-radius: 50%;
+  padding: 25px;
+  flex-shrink: 0;
+}
+
+.nosotros h3 {
+  margin: 1rem 0 0.5rem;
+  color: #5d4037;
+}
+
+.lista-beneficios {
+  margin-left: 1.2rem;
+}
+
+/* 5. PRODUCTOS (Flexbox + Cards) */
+.contenedor-productos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.producto {
+  background-color: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  width: 320px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.producto:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 22px rgba(0, 0, 0, 0.22);
+}
+
+.producto img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.producto h3 {
+  color: #4e342e;
+  margin: 1rem 1rem 0.5rem;
+}
+
+.producto p {
+  margin: 0 1rem;
+  color: #6d4c41;
+  min-height: 48px;
+}
+
+.precio {
+  display: block;
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #a1672f;
+  margin: 0.5rem 1rem 1.2rem;
+}
+
+/* 6. CONTACTO: FORMULARIO Y REGISTROS */
+.contacto-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2.5rem;
+}
+
+.formulario,
+.registros {
+  flex: 1;
+  min-width: 0; 
+}
+
+.registros {
+  flex: 1.3;
+  overflow-x: auto; 
+}
+
+.formulario label {
+  display: block;
+  margin-top: 0.9rem;
+  margin-bottom: 0.3rem;
+  font-weight: 600;
+  color: #5d4037;
+}
+
+.formulario input,
+.formulario select,
+.formulario textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #c9b9ac;
+  border-radius: 6px;
+  font-family: inherit;
+  font-size: 0.95rem;
+}
+
+.formulario input:focus,
+.formulario select:focus,
+.formulario textarea:focus {
+  outline: none;
+  border-color: #a1672f;
+  box-shadow: 0 0 0 2px rgba(161, 103, 47, 0.2);
+}
+
+.botones {
+  display: flex;
+  gap: 12px;
+  margin-top: 1.2rem;
+}
+
+.botones button {
+  flex: 1;
+  background-color: #5d4037;
+  color: #fff;
+  border: none;
+  padding: 0.8rem;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.botones button:hover {
+  background-color: #4e342e;
+}
+
+.btn-secundario {
+  background-color: #a1887f !important;
+}
+
+.btn-secundario:hover {
+  background-color: #8d6e63 !important;
+}
+
+/* Mensaje de validación */
+#mensaje {
+  margin-top: 1rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+#mensaje.error {
+  color: #b71c1c;
+}
+
+#mensaje.exito {
+  color: #2e7d32;
+}
+
+/* Tabla de registros */
+table {
+  width: 100%;
+  table-layout: fixed; 
+  border-collapse: collapse;
+  background-color: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+thead {
+  background-color: #5d4037;
+  color: #fff;
+}
+
+th,
+td {
+  padding: 0.6rem;
+  font-size: 0.88rem;
+  text-align: left;
+  border-bottom: 1px solid #e0d6cc;
+  overflow-wrap: break-word;
+}
+
+/* Los encabezados no se parten a la mitad de la palabra */
+th {
+  overflow-wrap: normal;
+  word-break: keep-all;
+}
+
+tbody tr:hover {
+  background-color: #f5efe9;
+}
+
+.fila-vacia td {
+  text-align: center;
+  color: #9e8c80;
+  font-style: italic;
+}
+
+/* 7. FOOTER */
+footer {
+  background-color: #3e2723;
+  color: #fff;
+  padding: 2.5rem 2rem 1.5rem;
+  margin-top: 2rem;
+}
+
+.footer-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 1.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-grid h3 {
+  color: #ffcc80;
+  margin-bottom: 0.5rem;
+}
+
+.footer-copy {
+  text-align: center;
+  margin-top: 1.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid #5d4037;
+  font-size: 0.9rem;
+  color: #d7ccc8;
+}
+
+/* 8. DISEÑO RESPONSIVE */
+@media (max-width: 768px) {
+  .nav {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .nav-menu {
+    gap: 18px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .banner h1 {
+    font-size: 2.2rem;
+  }
+
+  .banner h2 {
+    font-size: 1.6rem;
+  }
+
+  .nosotros-contenido {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .lista-beneficios {
+    text-align: left;
+    display: inline-block;
+  }
+
+  .contacto-grid {
+    flex-direction: column;
+  }
+
+  /* Tabla con scroll horizontal en móviles pequeños */
+  .registros {
+    overflow-x: auto;
+  }
+}

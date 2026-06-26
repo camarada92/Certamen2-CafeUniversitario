@@ -1,0 +1,21 @@
+Uso de Inteligencia Artificial - Certamen N°2
+
+Para el desarrollo de este proyecto se utilizaron dos herramientas de IA como apoyo:
+GitHub Copilot uso principal, para la estructura HTML y la lógica JavaScript y
+Google Gemini uso puntual, para los estilos y detalles visuales con CSS.
+
+
+Como creo la estructura semántica de la pagina con header, nav, banner, secciones y footer?
+
+Como puedo alinear las tarjetas de productos horizontalmente con flexbox?
+
+Como puedo aplicarle un efecto hover a mis tarjetas de productos?
+
+Como pongo una imagen de fondo fija con un velo de color y secciones semitransparentes?
+
+Como capturo los datos del formulario, los valido y los guardo en un arreglo con JavaScript?
+
+Como muestro las solicitudes en una tabla sin usar base de datos?
+
+Como agrego un diseño responsive para que se vea bien en el celular?
+
